@@ -1,0 +1,21 @@
+{
+  "tests": [
+    {
+      "name": "GET stories list",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": { "stories": [] },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "POST new story",
+      "method": "POST",
+      "path": "/",
+      "body": { "author_name": "Тест", "city": "Симферополь", "story": "Это тестовая история о добрых соседях" },
+      "expectedStatus": 201,
+      "expectedBody": { "ok": true },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
